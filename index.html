@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHA5E</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.cdnfonts.com/css/druk-wide-bold" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Add preloader before main content -->
+    <div class="preloader">
+        <svg id="logo" viewBox="0 0 200 50">
+            <path id="P" d="M10,10 L10,40 M10,10 L30,10 Q40,10 40,20 Q40,30 30,30 L10,30" />
+            <path id="H" d="M50,10 L50,40 M50,25 L70,25 M70,10 L70,40" />
+            <path id="A" d="M90,40 L100,10 L110,40 M95,25 L105,25" />
+            <path id="5" d="M110,10 L130,10 M110,10 L110,25 L125,25 L125,40 L110,40" />
+            <path id="E" d="M150,10 L150,40 M150,10 L170,10 M150,25 L165,25 M150,40 L170,40" />
+        </svg>
+        <p class="loading-text">Loading...</p>
+    </div>
+    <main>
+      <!-- navigation bar -->
+      <nav class="nav">
+        <div class="brand">PHA5E</div>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="options">
+          <h4>Our vision</h4>
+          <h4>Our team</h4>
+          <h4>Our projects</h4>
+          <h4>Contact us</h4>
+          <div class="lang-toggle">
+            <span class="fr">FR</span>
+            <span>/</span>
+            <span class="en active">EN</span>
+            <div class="underline"></div>
+          </div>
+        </div>
+      </nav>
+      <!-- wrapper div for both text and image -->
+      <div class="main-hero">
+        <div class="hero-div">
+          <div class="hero-container">
+            <div class="hero-text">
+              <div class="h1-div"><h1>IMAGINING</h1></div>
+              <div class="h1-div"><h1>UNIQUE</h1></div>
+              <div class="h1-div"><h1>CONCEPTS</h1></div>
+              <div class="h1-div"><h1>AND DIGITAL</h1></div>
+              <div class="h1-div"><h1>EXPERIENCES</h1></div>
+            </div>
+            <!-- svg for the above text (hero-text) -->
+            <svg
+              class="svg-text"
+              width="1000"
+              height="600"
+              xmlns="http://www.w3.org/2000/svg"
+              text-rendering="optimizeLegibility"
+            >
+              <!-- Background Outlined Text -->
+              <text
+                x="50%"
+                y="150"
+                font-size="95"
+                font-weight="bold"
+                fill="none"
+                stroke="#333"
+                stroke-width="2"
+                opacity="1"
+                text-anchor="middle"
+                dx="-0.58rem"
+              >
+                IMAGINING
+              </text>
+              <text
+                x="50%"
+                y="244"
+                font-size="95"
+                font-weight="bold"
+                fill="none"
+                stroke="#333"
+                stroke-width="2"
+                opacity="1"
+                text-anchor="middle"
+                dx="-0.58rem"
+              >
+                UNIQUE
+              </text>
+              <text
+                x="50%"
+                y="339"
+                font-size="95"
+                font-weight="bold"
+                fill="none"
+                stroke="#333"
+                stroke-width="2"
+                opacity="1"
+                text-anchor="middle"
+                dx="-0.58rem"
+              >
+                CONCEPTS
+              </text>
+              <text
+                x="50%"
+                y="435"
+                font-size="95"
+                font-weight="bold"
+                fill="none"
+                stroke="#333"
+                stroke-width="2"
+                opacity="1"
+                text-anchor="middle"
+                dx="-0.58rem"
+              >
+                AND DIGITAL
+              </text>
+              <text
+                x="50%"
+                y="530"
+                font-size="95"
+                font-weight="bold"
+                fill="none"
+                stroke="#333"
+                stroke-width="2"
+                opacity="1"
+                text-anchor="middle"
+                dx="-0.58rem"
+              >
+                EXPERIENCES
+              </text>
+            </svg>
+          </div>
+          <!-- image div contains image and its equivalent svg and screen -->
+          <div class="image-div" id="image1">
+            <div class="img">
+              <div class="text-1">
+                <h2>BIGGER<br/>SCIENCE</h2>
+                <p>Immersive Experience / WebGL / Gaming</p>
+              </div>
+              <img src="./img/image1.jpg" alt="" />
+            </div>
+            <div class="svg-div">
+              <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer Box -->
+                <rect
+                  x="50"
+                  y="50"
+                  width="340"
+                  height="200"
+                  stroke="#333"
+                  stroke-width="1"
+                  fill="none"
+                  opacity="1"
+                />
+
+                <!-- Corrected Diagonal Lines -->
+                <line
+                  x1="50"
+                  y1="50"
+                  x2="390"
+                  y2="250"
+                  stroke="#333"
+                  stroke-width="1"
+                />
+                <line
+                  x1="390"
+                  y1="50"
+                  x2="50"
+                  y2="250"
+                  stroke="#333"
+                  stroke-width="1"
+                />
+              </svg>
+            </div>
+            <div class="screen" id="screen1"></div>
+          </div>
+          <div class="image-div" id="image2">
+            <div class="img">
+              <img src="./img/image2.jpg" alt="" />
+              <div class="text-2">
+                <h2>MUCEM</h2>
+                <p>Experiential Website</p>
+              </div>
+            </div>
+            <div class="screen" id="screen2"></div>
+            <div class="svg-div">
+              <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer Box -->
+                <rect
+                  x="50"
+                  y="50"
+                  width="340"
+                  height="200"
+                  stroke="#333"
+                  stroke-width="1"
+                  fill="none"
+                  opacity="1"
+                />
+
+                <!-- Corrected Diagonal Lines -->
+                <line
+                  x1="50"
+                  y1="50"
+                  x2="390"
+                  y2="250"
+                  stroke="#333"
+                  stroke-width="1"
+                />
+                <line
+                  x1="390"
+                  y1="50"
+                  x2="50"
+                  y2="250"
+                  stroke="#333"
+                  stroke-width="1"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="image-div" id="image3">
+            <div class="img">
+              <img src="./img/image3.jpg" alt="" />
+              <div class="text-3">
+                <h2>UNGANISHA</h2>
+                <p>Experiential Website / WebGL / 3D</p>
+              </div>
+            </div>
+            <div class="screen" id="screen3"></div>
+            <div class="svg-div">
+              <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer Box -->
+                <rect
+                  x="50"
+                  y="50"
+                  width="340"
+                  height="200"
+                  stroke="#333"
+                  stroke-width="1"
+                  fill="none"
+                  opacity="1"
+                />
+
+                <!-- Corrected Diagonal Lines -->
+                <line
+                  x1="50"
+                  y1="50"
+                  x2="390"
+                  y2="250"
+                  stroke="#333"
+                  stroke-width="1"
+                />
+                <line
+                  x1="390"
+                  y1="50"
+                  x2="50"
+                  y2="250"
+                  stroke="#333"
+                  stroke-width="1"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="image-div" id="image4">
+            <div class="img">
+              <img src="./img/image4.jpg" alt="" />
+              <div class="text-4">
+                <h2>OLIVE TREE</h2>
+                <p>Interactive Installation / Real Time</p>
+              </div>
+            </div>
+            <div class="screen" id="screen4"></div>
+            <div class="svg-div">
+              <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer Box -->
+                <rect
+                  x="50"
+                  y="50"
+                  width="340"
+                  height="200"
+                  stroke="#333"
+                  stroke-width="1"
+                  fill="none"
+                  opacity="1"
+                />
+
+                <!-- Corrected Diagonal Lines -->
+                <line
+                  x1="50"
+                  y1="50"
+                  x2="390"
+                  y2="250"
+                  stroke="#333"
+                  stroke-width="1"
+                />
+                <line
+                  x1="390"
+                  y1="50"
+                  x2="50"
+                  y2="250"
+                  stroke="#333"
+                  stroke-width="1"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

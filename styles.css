@@ -1,0 +1,459 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+html,body{
+width: 100%;
+height: 100%;
+}
+
+main{
+position: relative;
+background-color: #212121;
+color: white;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+
+}
+
+.nav{
+height: 80px;
+width: 100%;
+/* background: red; */
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 25px;
+}
+
+.brand{
+font-size: 25px;
+font-weight: 900;
+font-family: 'Druk Wide Bold', sans-serif;
+letter-spacing: -1px;
+}
+
+.options{
+display: flex;
+justify-content: space-between;
+gap: 50px;
+}
+
+.options h4{
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+font-weight: normal;
+font-size: 16px;
+cursor: pointer;
+}
+
+.main-hero{
+width: 100%;
+height: calc(100vh - 80px);
+display: flex;
+align-items: center;
+justify-content:center ;
+}
+
+.hero-div{
+width: 80%;
+height: 85vh;
+padding: 40px 10px;
+position: relative;
+}
+
+.h1-div{
+overflow: hidden;
+}
+
+.hero-text h1{
+font-family: 'Druk Wide Bold', sans-serif;
+font-weight: 800;
+font-size: 97px;
+line-height: 95px;
+text-align: center;
+position: relative;
+z-index: 2;
+}
+
+
+.image-div, .img{
+width: 340px;
+height: 200px;
+position:absolute;
+
+}
+
+.image-div img{
+width:100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+transition: 0.3s ease-in-out;
+}
+
+.image-div:hover img{
+  transform: scale(1.2);
+  }
+
+.screen{
+width: 100%;
+height: 100%;
+background-color: transparent;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 4;
+}
+
+#image1{
+top: 18%;
+left: 3%;
+}
+
+#image2{
+right: 14%;
+top:0;
+}
+
+#image3{
+bottom: 2%;
+left: 8%;
+}
+
+#image4{
+bottom: 20%;
+right: 9%;
+}
+
+
+.svg-div{
+width: 100%;
+height: 100%;
+position: absolute;
+left: -15%;
+top: -25%;
+z-index: 0;
+display: none;
+}
+
+.svg-text{
+width: 100%;
+height: 100%;
+position:absolute;
+top: -4%;
+font-family: 'Druk Wide Bold', sans-serif;
+font-weight: 900;
+z-index: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+#image1 h2, #image2 h2, #image3 h2, #image4 h2{
+  font-family: 'Druk Wide Bold', sans-serif;
+  font-size: 40px;
+  letter-spacing: 1;
+  font-weight: 900;
+  line-height: 1;
+}
+
+#image1 p, #image2 p, #image3 p, #image4 p{
+  font-size: 1.2rem;
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+#image1 h2, #image1 p {
+  transition: visibility 0.3s, opacity 0.3s ease; /* Smooth transition for text */
+  opacity: 0; /* Start with text invisible */
+}
+
+#image1:hover h2, #image1:hover p {
+  opacity: 1;
+}
+
+#image2 h2, #image2 p {
+  transition: visibility 0.3s, opacity 0.3s ease; /* Smooth transition for text */
+  opacity: 0; /* Start with text invisible */
+}
+
+#image2:hover h2, #image2:hover p {
+  opacity: 1;
+}
+
+#image3 h2, #image3 p {
+  transition: visibility 0.3s, opacity 0.3s ease; /* Smooth transition for text */
+  opacity: 0; /* Start with text invisible */
+}
+
+#image3:hover h2, #image3:hover p {
+  opacity: 1;
+}
+
+#image4 h2, #image4 p {
+  transition: visibility 0.3s, opacity 0.3s ease; /* Smooth transition for text */
+  opacity: 0; /* Start with text invisible */
+}
+
+#image4:hover h2, #image4:hover p {
+  opacity: 1;
+}
+
+.text-1 {
+  position: absolute;
+  top: 11.5rem; /* Adjust this value to control distance from image */
+  left: 13rem;
+  z-index: 4;
+}
+
+.text-2 {
+  position: absolute;
+  top: 11.5rem; /* Adjust this value to control distance from image */
+  left: 13.5rem;
+  z-index: 4;
+}
+
+.text-3 {
+  position: absolute;
+  top: 11.5rem; /* Adjust this value to control distance from image */
+  left: 210px;
+  z-index: 4;
+}
+
+.text-4 {
+  position: absolute;
+  top: 11.5rem;
+  left: 13.5rem;
+  z-index: 4;
+  white-space: nowrap;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#logo {
+    width: 60%;
+    height: auto;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.loading-text {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0;
+    color: white;
+}
+
+/* Hide main content initially */
+main {
+    opacity: 0;
+}
+
+/* Add responsive styles */
+@media screen and (max-width: 1024px) {
+  .options {
+    display: none; /* Hide the regular menu */
+  }
+  
+  /* Add hamburger menu */
+  .nav {
+    position: relative;
+  }
+  
+  .menu-toggle {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    transition: 0.3s;
+  }
+  
+  .menu-toggle span:nth-child(1) { top: 0; }
+  .menu-toggle span:nth-child(2) { top: 10px; }
+  .menu-toggle span:nth-child(3) { top: 20px; }
+  
+  /* Responsive text sizing */
+  .hero-text h1 {
+    font-size: 60px;
+    line-height: 65px;
+  }
+  
+  /* Adjust image positions for smaller screens */
+  .image-div {
+    width: 280px;
+    height: 165px;
+  }
+  
+  #image1 { left: 1%; }
+  #image2 { right: 5%; }
+  #image3 { left: 3%; }
+  #image4 { right: 3%; }
+  
+  .text-1, .text-2, .text-3, .text-4 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  
+  .image-div {
+    width: 240px;
+    height: 141px;
+  }
+  
+  .brand {
+    font-size: 20px;
+  }
+}
+
+/* Update existing menu-toggle styles */
+.menu-toggle {
+    display: none; /* Hide by default, show in media query */
+    position: relative;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menu-toggle span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    transition: .3s all ease;
+}
+
+/* Add transform animations for the hamburger to cross */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+/* Update media query for mobile menu */
+@media screen and (max-width: 1024px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .options {
+        position: fixed;
+        top: 80px; /* Height of nav */
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #212121;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        z-index: 99;
+    }
+
+    .options.active {
+        height: calc(100vh - 80px);
+        padding: 20px 0;
+        display: flex;
+    }
+
+    .options h4 {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: none;
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .options.active h4 {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.3s ease;
+    }
+
+    /* Add transition delays for each menu item */
+    .options.active h4:nth-child(1) { transition-delay: 0.1s; }
+    .options.active h4:nth-child(2) { transition-delay: 0.2s; }
+    .options.active h4:nth-child(3) { transition-delay: 0.3s; }
+    .options.active h4:nth-child(4) { transition-delay: 0.4s; }
+    .options.active h4:nth-child(5) { transition-delay: 0.5s; }
+}
+
+/* Add these new styles */
+.lang-toggle {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.lang-toggle span {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  padding: 2px 0;
+}
+
+.underline {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 20px; /* Adjust based on text width */
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.fr.active ~ .underline {
+  transform: translateX(0);
+}
+
+.en.active ~ .underline {
+  transform: translateX(28px); /* Adjust based on gap and text width */
+}
+
+/* Update the existing media query */
+@media screen and (max-width: 1024px) {
+    .options.active .lang-toggle {
+        margin-top: 20px;
+    }
+}
