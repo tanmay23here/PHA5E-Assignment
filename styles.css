@@ -448,7 +448,7 @@ main {
 }
 
 .en.active ~ .underline {
-  transform: translateX(28px); /* Adjust based on gap and text width */
+  transform: translateX(40px);
 }
 
 /* Update the existing media query */
